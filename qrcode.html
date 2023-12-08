@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+</head>
+<body>
+    <h1>Coffee Shop Qr Menu</code></h1>
+    <div id="qrcode"></div>
+
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+
+    <!-- Your QR code generation script -->
+    <script>
+        var qrData = "http:// 172.16.151.74:3001/";
+        // var qrData = "http://localhost:3001"
+
+        var qrcode = new QRCode(document.getElementById("qrcode"), {
+            text: qrData,
+            width: 128,
+            height: 128,
+        });
+    </script>
+</body>
+</html>
